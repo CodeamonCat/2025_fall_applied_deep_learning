@@ -1,0 +1,23 @@
+{
+  "model_name_or_path": "hfl/chinese-lert-base",
+  "tokenizer_name": "hfl/chinese-lert-base",
+
+  "context_file": "./dataset/context.json",
+  "train_file": "./dataset/train.json",
+  "validation_file": "./dataset/valid.json",
+  "max_seq_length": 512,
+
+  "do_train": true,
+  "do_eval": true,
+  "do_predict": false,
+  "doc_stride": 128,
+  "gradient_accumulation_steps": 2,
+  "learning_rate": 3e-5,
+  "num_train_epochs": 2,
+  "overwrite_output_dir": true,
+  "output_dir": "./result_qa",
+  "per_device_train_batch_size": 1,
+  "save_total_limit": 1,
+  "save_strategy": "steps",
+  "save_steps": 10000
+}

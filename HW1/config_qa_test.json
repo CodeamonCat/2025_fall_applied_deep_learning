@@ -1,0 +1,21 @@
+{
+  "model_name_or_path": "./result_qa",
+  "tokenizer_name": "./result_qa",
+  
+  "context_file": "./dataset/context.json",
+  "test_file": "./result_mc/test_predictions.json",
+  "test_output": "./result_qa/prediction.csv",
+  "max_seq_length": 512,
+
+  "do_train": false,
+  "do_eval": false,
+  "do_predict": true,
+  "doc_stride": 128,
+  "gradient_accumulation_steps": 2,
+  "learning_rate": 3e-5,
+  "num_train_epochs": 2,
+  "overwrite_output_dir": true,
+  "output_dir": "./result_qa",
+  "per_device_train_batch_size": 1,
+  "save_total_limit": 1
+}
