@@ -1,0 +1,48 @@
+#!/bin/bash
+# "${1}": path to context.json.
+# "${2}": path to test.json.
+# "${3}": path to the output prediction file named prediction.csv.
+
+# multiple-choice inference
+python hw1_mc.py \
+    --model_name_or_path ./result_mc \
+    --tokenizer_name ./result_mc \
+    --context_file "${1}" \
+    --test_file "${2}" \
+    --test_output ./result_mc/test_predictions.json \
+    --max_seq_length 512 \
+    --do_train false \
+    --do_eval false \
+    --do_predict true \
+    --gradient_accumulation_steps 2 \
+    --learning_rate 3e-5 \
+    --num_train_epochs 1 \
+    --overwrite_output_dir true \
+    --per_device_eval_batch_size 2 \
+    --per_device_train_batch_size 1 \
+    --save_total_limit 1 \
+
+# question answering inference
+python hw1_qa.py \
+    --model_name_or_path ./result_qa \
+    --tokenizer_name ./result_qa \
+    --context_file "${1}" \
+    --test_file ./result_mc/test_predictions.json \
+    --test_output "${3}" \
+    --max_seq_length 512 \
+    --do_train false \
+    --do_eval false \
+    --do_predict true \
+    --doc_stride 128 \
+    --gradient_accumulation_steps 2 \
+    --learning_rate 3e-5 \
+    --num_train_epochs 2 \
+    --overwrite_output_dir true \
+    --per_device_train_batch_size 1 \
+    --save_total_limit 1
+
+# check output the issue below
+# --test_file ./result_mc/test_predictions.json \
+# --test_output "${3}" \
+# --test_file ./result_mc_"$model_name"/test_predictions.json \
+# --output_dir ./result_qa_"$model_name" \
