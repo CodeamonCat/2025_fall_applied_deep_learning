@@ -40,9 +40,3 @@ python hw1_qa.py \
     --overwrite_output_dir true \
     --per_device_train_batch_size 1 \
     --save_total_limit 1
-
-# check output the issue below
-# --test_file ./result_mc/test_predictions.json \
-# --test_output "${3}" \
-# --test_file ./result_mc_"$model_name"/test_predictions.json \
-# --output_dir ./result_qa_"$model_name" \
