@@ -10,7 +10,7 @@ October 01, 2025
 
 ## Installation
 ```bash
-$ conda env create -f environment.yml
+$ conda env create -f environment.yml -y
 $ conda conda activate ADL_HW1
 $ bash ./download.sh
 ```
