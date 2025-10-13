@@ -7,13 +7,13 @@ dependencies:
   - pip
   - pip:
       - bitsandbytes==0.44.1
-      - datasets==3.0.1
-      - evaluate==0.4.0
+      - datasets
+      - evaluate
       - gdown
       - matplotlib
       - peft==0.13.0
       - torch==2.4.1
       - transformers>=4.51.0
 # Usage:
-# conda env create -f environment.yml
+# conda env create -f environment.yml -y
 # conda activate ADL_HW2
