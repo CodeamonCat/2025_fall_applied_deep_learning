@@ -5,7 +5,7 @@ School of Forestry and Resource Conservation<br>
 Graduate Institute of Biomedical Electronics and Bioinformatics<br>
 National Taiwan University<br>
 <a href="mailto:R11625015@ntu.edu.tw">R11625015@ntu.edu.tw</a><br>
-October 01, 2025
+October 13, 2025
 </p>
 
 ## Installation
@@ -14,3 +14,30 @@ $ conda env create -f environment.yml -y
 $ conda conda activate ADL_HW2
 $ bash ./download.sh
 ```
+## Quickstart
+To run infer directly, use the script below
+```bash
+$ bash ./run.sh /path/to/model-folder /path/to/adapter_checkpoint \ /path/to/input.json /path/to/output.json
+```
+
+## Getting Started
+### Model Training and Evaluation
+We followed the example provided in the QLoRA source code [[1](#qlora)] to train our model.
+```bash
+$ bash train.sh
+```
+
+### Model Inference
+```bash
+$ bash infer.sh
+```
+
+### Perplexity Calculation
+```bash
+$ bash ppl.sh
+```
+
+
+
+## Reference
+1. <a id="qlora"></a> [QLoRA: Efficient Finetuning of Quantized LLMs Source Code](https://github.com/artidoro/qlora/blob/main/qlora.py)
