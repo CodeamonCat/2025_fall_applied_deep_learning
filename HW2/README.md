@@ -21,8 +21,9 @@ $ bash ./run.sh /path/to/model-folder /path/to/adapter_checkpoint \ /path/to/inp
 ```
 
 ## Getting Started
+We followed the example provided in the QLoRA source code [[1](#qlora)] to train our base model Qwen/Qwen3-4B [[2](#Qwen3-4B)]
+
 ### Model Training and Evaluation
-We followed the example provided in the QLoRA source code [[1](#qlora)] to train our model.
 ```bash
 $ bash train.sh
 ```
@@ -37,7 +38,6 @@ $ bash infer.sh
 $ bash ppl.sh
 ```
 
-
-
 ## Reference
 1. <a id="qlora"></a> [QLoRA: Efficient Finetuning of Quantized LLMs Source Code](https://github.com/artidoro/qlora/blob/main/qlora.py)
+2. <a id="Qwen3-4B"></a> [Hugging Face Qwen/Qwen3-4B Model](https://huggingface.co/Qwen/Qwen3-4B)
