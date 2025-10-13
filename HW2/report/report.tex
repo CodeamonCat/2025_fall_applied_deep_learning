@@ -1,0 +1,80 @@
+\documentclass{article}
+
+\usepackage[final]{neurips_2019}
+
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK TC}
+
+\usepackage[
+    colorlinks=true,
+    urlcolor=blue,
+]{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{lipsum}
+
+
+\newcommand{\note}[1]{\textcolor{blue}{{#1}}}
+
+\title{
+  NTU 2025 Fall Applied Deep Learning HW2 Report \\
+  \vspace{1em}
+  \small{\normalfont NTU CSIE 5431 Applied Deep Learning}
+}
+
+\author{
+  CHIH-HAO LIAO \\
+  {\hypersetup{urlcolor=black}\href{https://www.fo.ntu.edu.tw/}{School of Forestry and Resource Conservation}}\\
+  {\hypersetup{urlcolor=black}\href{https://www.bebi.ntu.edu.tw/}{Graduate Institute of Biomedical Electronics and Bioinformatics}}\\
+  {\hypersetup{urlcolor=black}\href{https://www.ntu.edu.tw/}{National Taiwan University}}\\
+  {\hypersetup{urlcolor=black}\href{mailto:R11625015@ntu.edu.tw}{\texttt{R11625015@ntu.edu.tw}}} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Q1: LLM Tuning (10\%)}
+\subsection{Describe: (6\%)}
+\begin{itemize}
+    \item How much training data did you use? (2\%)
+    \item How did you tune your model? (2\%)
+    \item What hyper-parameters did you use? (2\%)
+\end{itemize}
+
+\subsection{Show your performance: (4\%)}
+\begin{itemize}
+    \item What is the final performance of your model on the public testing set? (2\%)
+    \item Plot the  learning curve on the public testing set (2\%)
+\end{itemize}
+
+\section{Q2: LLM Inference Strategies (5\%)}
+\subsection{Zero-Shot (1\%)}
+\begin{itemize}
+    \item What is your setting? How did you design your prompt? (1\%)
+\end{itemize}
+
+\subsection{Few-Shot (In-context Learning) (2\%)}
+\begin{itemize}
+    \item What is your setting? How did you design your prompt? (1\%)
+    \item How many in-context examples are utilized? How you select them? (1\%)
+\end{itemize}
+
+\subsection{Comparison: (1\%)}
+\begin{itemize}
+    \item What's the difference between the results of zero-shot, few-shot, and LoRA? (2\%)
+\end{itemize}
+
+\section{Q3: Bonus: Try Llama3-Taiwan (8B) (2\%)}
+\begin{itemize}
+    \item \href{https://huggingface.co/yentinglin/Llama-3.1-Taiwan-8B}{Llama-3-8b} trained by traditional Chinese data
+    \item Tune this model on the classical chinese data
+    \item Describe your experimental settings and compare the results to those obtained from your original methods
+\end{itemize}
+
+\end{document}
